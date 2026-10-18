@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ero6ve3r6gdr"]
+
+[ext_resource type="Script" uid="uid://dai1w6l3gdiip" path="res://ui/protein/protein_chain_visual.gd" id="1_gwu6x"]
+
+[node name="ProteinChainVisual" type="Node2D" unique_id=273972801]
+position = Vector2(412, 237)
+script = ExtResource("1_gwu6x")

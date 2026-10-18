@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bhreog7khmpxf"]
+
+[ext_resource type="Script" uid="uid://ml736xwax46g" path="res://ui/DNA/dna_base.gd" id="1_pl8s2"]
+
+[node name="DNABase" type="Node2D" unique_id=1654433718]
+position = Vector2(0, -1)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_pl8s2")
+
+[node name="GlowHexagon" type="Polygon2D" parent="." unique_id=1683130855]
+scale = Vector2(1.18, 1.114)
+color = Color(0.0627451, 0.1254902, 0.16862746, 1)
+polygon = PackedVector2Array(-16.007845, -21.636368, 15.992155, -21.636368, 31.992155, 2.3636322, 15.992155, 26.363632, -16.007845, 26.363632, -32.007843, 2.3636322)
+uv = PackedVector2Array(-171.5, -18, -136.5, 6, -137.5, 46, -171.5, 64, -204.5, 42, -206.5, 5)
+
+[node name="OuterHexagon" type="Polygon2D" parent="." unique_id=388359608]
+scale = Vector2(1.08, 1.02)
+color = Color(0.0627451, 0.1254902, 0.16862746, 1)
+polygon = PackedVector2Array(-16.007845, -21.636368, 15.992155, -21.636368, 31.992155, 2.3636322, 15.992155, 26.363632, -16.007845, 26.363632, -32.007843, 2.3636322)
+uv = PackedVector2Array(-171.5, -18, -136.5, 6, -137.5, 46, -171.5, 64, -204.5, 42, -206.5, 5)
+
+[node name="Hexagon" type="Polygon2D" parent="." unique_id=929740637]
+scale = Vector2(0.9, 0.85)
+color = Color(0.0627451, 0.1254902, 0.16862746, 1)
+polygon = PackedVector2Array(-16.007845, -21.636368, 15.992155, -21.636368, 31.992155, 2.3636322, 15.992155, 26.363632, -16.007845, 26.363632, -32.007843, 2.3636322)
+uv = PackedVector2Array(-171.5, -18, -136.5, 6, -137.5, 46, -171.5, 64, -204.5, 42, -206.5, 5)
+
+[node name="InnerHexagon" type="Polygon2D" parent="." unique_id=359163494]
+visible = false
+scale = Vector2(1.059, 1)
+color = Color(0.0627451, 0.1254902, 0.16862746, 1)
+polygon = PackedVector2Array(-16.007845, -21.636368, 15.992155, -21.636368, 31.992155, 2.3636322, 15.992155, 26.363632, -16.007845, 26.363632, -32.007843, 2.3636322)
+uv = PackedVector2Array(-171.5, -18, -136.5, 6, -137.5, 46, -171.5, 64, -204.5, 42, -206.5, 5)
+
+[node name="BaseLabel" type="Label" parent="." unique_id=1775502054]
+custom_minimum_size = Vector2(50, 50)
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+mouse_filter = 0
+theme_override_colors/font_color = Color(0.9490196, 0.9882353, 1, 1)
+theme_override_colors/font_outline_color = Color(0.03137255, 0.0627451, 0.09019608, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 22
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="DamageLine" type="Line2D" parent="." unique_id=773807452]
+visible = false
+z_index = 5
+points = PackedVector2Array(-8, -10, 2, 0, -4, 12)
+width = 3.0
+default_color = Color(1, 0.81960785, 0.4, 1)

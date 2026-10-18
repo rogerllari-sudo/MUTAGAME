@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://cfdq5uvkpwvnb"]
+
+[ext_resource type="Script" uid="uid://b8t7bg8n5ds3e" path="res://cover_scene.gd" id="1_bxjwb"]
+[ext_resource type="Script" uid="uid://cs5i806dx3h3k" path="res://ui/background/hud_background.gd" id="1_ukxxi"]
+[ext_resource type="FontFile" uid="uid://bnmgfp11fn2kf" path="res://fonts/Oxanium-SemiBold.ttf" id="2_bxjwb"]
+[ext_resource type="Texture2D" uid="uid://e0lu52x81v8r" path="res://ui/human/ub lgoo png.png" id="3_qk88a"]
+[ext_resource type="Texture2D" uid="uid://ctbdei83u0pva" path="res://ui/buttons/PNG igem.png" id="4_g5m34"]
+
+[node name="CoverScene" type="Control" unique_id=951665302]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bxjwb")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1838811807]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05490196, 0.06666667, 0.08627451, 1)
+
+[node name="HUDBackground" type="Control" parent="." unique_id=2140026816]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_ukxxi")
+
+[node name="TitleArea" type="Control" parent="." unique_id=832225322]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameTitle" type="Label" parent="TitleArea" unique_id=510633880]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 162.0
+offset_right = 919.0
+offset_bottom = 350.0
+theme_override_colors/font_color = Color(0.9490196, 0.98039216, 1, 1)
+theme_override_fonts/font = ExtResource("2_bxjwb")
+theme_override_font_sizes/font_size = 100
+text = "MUTAGAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProtocolTitle" type="Label" parent="TitleArea" unique_id=583209423]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 332.0
+offset_right = 921.0
+offset_bottom = 373.0
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_fonts/font = ExtResource("2_bxjwb")
+theme_override_font_sizes/font_size = 40
+text = "GENETIC ADAPTATION  PROTOCOL"
+
+[node name="AccentLine" type="ColorRect" parent="TitleArea" unique_id=1537489413]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 412.0
+offset_right = 769.0
+offset_bottom = 414.0
+color = Color(0.4, 0.9019608, 1, 0.56078434)
+
+[node name="SystemLabel" type="Label" parent="TitleArea" unique_id=1916168259]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 437.0
+offset_right = 734.0
+offset_bottom = 460.0
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 0.56078434)
+theme_override_font_sizes/font_size = 16
+text = "GENOME ADAPTATION PROGRAM // MG-01"
+
+[node name="UB" type="Sprite2D" parent="TitleArea" unique_id=800645953]
+position = Vector2(61, 556.00006)
+scale = Vector2(0.27343738, 0.27656254)
+texture = ExtResource("3_qk88a")
+
+[node name="iGEM" type="Sprite2D" parent="TitleArea" unique_id=531318667]
+position = Vector2(150.5, 557.50006)
+scale = Vector2(0.03392922, 0.03356247)
+texture = ExtResource("4_g5m34")
+
+[node name="Label" type="Label" parent="TitleArea" unique_id=1537264551]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 609.0
+offset_right = 259.0
+offset_bottom = 632.0
+text = "Created and designed by Roger Llari"
+
+[node name="TransitionOverlay" type="ColorRect" parent="." unique_id=1643887744]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05490196, 0.06666667, 0.08627451, 1)

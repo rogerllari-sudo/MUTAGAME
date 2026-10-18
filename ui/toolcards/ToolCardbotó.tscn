@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://bafuhfy35qq63"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_at35s"]
+bg_color = Color(0.09019608, 0.13725491, 0.19215687, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4, 0.9019608, 1, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78s30"]
+bg_color = Color(0.09019608, 0.13725491, 0.19215687, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4, 0.9019608, 1, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47vci"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25lit"]
+bg_color = Color(0.078431375, 0.101960786, 0.12941177, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16078432, 0.8509804, 1, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0400r"]
+bg_color = Color(0.078431375, 0.101960786, 0.12941177, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16078432, 0.8509804, 1, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[node name="ToolCard" type="Button" unique_id=752012461]
+custom_minimum_size = Vector2(220, 110)
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_at35s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_78s30")
+theme_override_styles/hover = SubResource("StyleBoxFlat_47vci")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_25lit")
+theme_override_styles/focus = SubResource("StyleBoxFlat_0400r")
+
+[node name="Icon" type="Label" parent="." unique_id=820126687]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 38.0
+offset_right = 61.0
+offset_bottom = 61.0
+text = "☢"
+
+[node name="Title" type="Label" parent="." unique_id=405027806]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 75.0
+offset_top = 21.0
+offset_right = 115.0
+offset_bottom = 44.0
+text = "IR"
+
+[node name="Subtitle" type="Label" parent="." unique_id=1228042855]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 49.0
+offset_right = 161.0
+offset_bottom = 72.0

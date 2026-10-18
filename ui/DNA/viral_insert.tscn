@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://blwuqpe5mh80n"]
+
+[ext_resource type="Script" uid="uid://ci6f4fiwoohi4" path="res://ui/DNA/viral_insert.gd" id="1_try5a"]
+[ext_resource type="PackedScene" uid="uid://bhreog7khmpxf" path="res://ui/DNA/dna_base.tscn" id="1_uvcjh"]
+
+[node name="Node2D" type="Node2D" unique_id=1744080886]
+position = Vector2(84, 43)
+script = ExtResource("1_try5a")
+
+[node name="LeftDNABase" parent="." unique_id=1654433718 instance=ExtResource("1_uvcjh")]
+position = Vector2(29, 34)
+
+[node name="InsertLine" type="Line2D" parent="." unique_id=291924298]
+position = Vector2(0, 3)
+points = PackedVector2Array(0, 0, 0, 4, 0, 32)
+width = 2.0
+default_color = Color(0.4, 0.9019608, 1, 1)
+
+[node name="MiniBond" type="Line2D" parent="." unique_id=827090390]
+position = Vector2(0, -8.000076)
+scale = Vector2(1, 1.0000019)
+points = PackedVector2Array(-14, 42, 14, 42)
+width = 2.0
+default_color = Color(0.4, 0.9019608, 1, 1)
+
+[node name="RightDNABase" parent="." unique_id=800731692 instance=ExtResource("1_uvcjh")]
+position = Vector2(-29, 34)

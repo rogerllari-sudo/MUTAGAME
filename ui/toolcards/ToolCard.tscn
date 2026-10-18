@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://ceeedtm6up2ev"]
+
+[ext_resource type="Script" uid="uid://bikstfohnwxfs" path="res://ui/toolcards/tool_card.gd" id="1_78s30"]
+[ext_resource type="Script" uid="uid://c23sg6fet4nau" path="res://ui/toolcards/tool_card_frame.gd" id="2_0400r"]
+[ext_resource type="Texture2D" uid="uid://dedlb5kirdw8o" path="res://ui/toolcards/tool_ir.png" id="3_25lit"]
+
+[node name="ToolCard" type="Panel" unique_id=1287908074]
+offset_left = 180.0
+offset_top = 101.0
+offset_right = 363.0
+offset_bottom = 173.0
+script = ExtResource("1_78s30")
+
+[node name="Background" type="Panel" parent="." unique_id=1186488934]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardGlow" type="Control" parent="." unique_id=824583356]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_0400r")
+line_width = 5.0
+diagonal_size = 7.0
+draw_fill = false
+draw_inner_frame = false
+draw_details = false
+
+[node name="CardFrame" type="Control" parent="." unique_id=1286238593]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_0400r")
+line_width = 1.1
+diagonal_size = 7.0
+
+[node name="Icon" type="TextureRect" parent="." unique_id=425264853]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 14.0
+offset_right = 55.0
+offset_bottom = 57.0
+texture = ExtResource("3_25lit")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="." unique_id=1970186191]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 11.0
+offset_right = 100.0
+offset_bottom = 39.0
+theme_override_font_sizes/font_size = 19
+text = "Títol"
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="." unique_id=777166997]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 38.0
+offset_right = 169.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(0.654902, 0.7058824, 0.7529412, 1)
+theme_override_font_sizes/font_size = 13
+text = "Sub Títol"
+autowrap_mode = 3
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

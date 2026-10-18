@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cgdqb66554il7"]
+
+[node name="LaboratoryBackground" type="CanvasLayer" unique_id=767589601]
+
+[node name="BackgroundRoot" type="Control" parent="." unique_id=2049752877]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BaseDark" type="ColorRect" parent="BackgroundRoot" unique_id=1056650703]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0.03137255, 0.0627451, 0.09411765, 1)

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b6d4pipdsw3qo"]
+
+[ext_resource type="Script" uid="uid://ml736xwax46g" path="res://ui/DNA/dna_base.gd" id="1_aaei4"]
+
+[node name="DNABase" type="Node2D" unique_id=1654433718]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_aaei4")
+
+[node name="Hexagon" type="Polygon2D" parent="." unique_id=929740637]
+position = Vector2(172.00002, -14.000001)
+scale = Vector2(0.8239437, 0.8125)
+polygon = PackedVector2Array(-224, -7.999998, -192, -7.999998, -176, 16, -192, 39.999996, -224, 40.000004, -240, 16)
+uv = PackedVector2Array(-171.5, -18, -136.5, 6, -137.5, 46, -171.5, 64, -204.5, 42, -206.5, 5)
+
+[node name="BaseLabel" type="Label" parent="." unique_id=1775502054]
+custom_minimum_size = Vector2(50, 50)
+offset_left = -24.0
+offset_top = -26.0
+offset_right = 26.0
+offset_bottom = 24.0
+mouse_filter = 0
+theme_override_colors/font_color = Color(0.01, 0.01, 0.01, 1)
+theme_override_font_sizes/font_size = 18
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="DamageLine" type="Line2D" parent="." unique_id=773807452]
+visible = false
+points = PackedVector2Array(-8, -10, 2, 0, -4, 12)
+width = 3.0
+default_color = Color(1, 0.81960785, 0.4, 1)

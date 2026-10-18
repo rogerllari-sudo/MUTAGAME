@@ -1,0 +1,542 @@
+[gd_scene format=3 uid="uid://du2q7ukxuj1v7"]
+
+[ext_resource type="PackedScene" uid="uid://bqnkdqjw1qlf" path="res://ui/panels/SubjectSciFiPanel.tscn" id="1_kyjdd"]
+[ext_resource type="Script" uid="uid://cs5i806dx3h3k" path="res://ui/background/hud_background.gd" id="1_ptjug"]
+[ext_resource type="Script" uid="uid://etap5kav85bo" path="res://ui/human/subject_scanner.gd" id="3_53hov"]
+[ext_resource type="PackedScene" uid="uid://b6jinjj4j8p8r" path="res://ui/panels/SciFiPanel.tscn" id="3_jfucu"]
+[ext_resource type="Script" uid="uid://d1n4gwfwbqf75" path="res://ui/background/mission_separator.gd" id="4_53hov"]
+[ext_resource type="Script" uid="uid://8cqtpb5105qt" path="res://ui/human/ecg_visual.gd" id="4_cfqn4"]
+[ext_resource type="Script" uid="uid://cyxrwgbqcarao" path="res://start_protocol_panel.gd" id="5_ejy2n"]
+[ext_resource type="Shader" uid="uid://b1mckxf266oxu" path="res://ui/background/radial_transition.gdshader" id="6_4a4tu"]
+[ext_resource type="Texture2D" uid="uid://e0lu52x81v8r" path="res://ui/human/ub lgoo png.png" id="6_33mov"]
+[ext_resource type="FontFile" uid="uid://bnmgfp11fn2kf" path="res://fonts/Oxanium-SemiBold.ttf" id="6_jncqt"]
+[ext_resource type="Texture2D" uid="uid://ctbdei83u0pva" path="res://ui/buttons/PNG igem.png" id="6_k2do7"]
+[ext_resource type="Script" uid="uid://33w0t6ffe4y2" path="res://screen_frame.gd" id="7_bg18w"]
+[ext_resource type="PackedScene" uid="uid://c5s1fxc5vfojt" path="res://ui/panels/SciFiPanelV2.tscn" id="9_e4bpb"]
+[ext_resource type="PackedScene" uid="uid://bkhxxt67ejdxd" path="res://ui/panels/StatusRow.tscn" id="10_8glg8"]
+[ext_resource type="Script" uid="uid://b16eyo6sbuh2t" path="res://ui/buttons/execute_frame.gd" id="12_h0k2m"]
+[ext_resource type="Texture2D" uid="uid://2bla3vabsvty" path="res://ui/gene_icons/gene_alpha.png" id="12_wrdj4"]
+[ext_resource type="Texture2D" uid="uid://bbrnq8pxrur81" path="res://ui/gene_icons/gene_beta.png" id="13_n7f12"]
+[ext_resource type="Texture2D" uid="uid://b44md8sxl48xd" path="res://ui/gene_icons/gene_gamma.png" id="14_0s3qj"]
+[ext_resource type="Texture2D" uid="uid://lk7sckbdt5hf" path="res://ui/gene_icons/gene_epsilon.png" id="15_5tv0e"]
+[ext_resource type="Texture2D" uid="uid://cyhef8hrnndbc" path="res://ui/gene_icons/gene_delta.png" id="16_ahqkt"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h0k2m"]
+load_path = "res://.godot/imported/(old)alpha_neutral.png-921c6e3ec75e3f4f7d387d84825191be.ctex"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jncqt"]
+bg_color = Color(0.0627451, 0.11764706, 0.16078432, 0.5058824)
+border_color = Color(0.22352941, 0.84705883, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0.22352941, 0.84705883, 1, 0.2509804)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4a4tu"]
+shader = ExtResource("6_4a4tu")
+shader_parameter/core_color = Color(0.85, 1, 1, 1)
+shader_parameter/energy_color = Color(0.4, 0.9, 1, 1)
+shader_parameter/electric_color = Color(0, 0.72, 0.95, 1)
+shader_parameter/deep_color = Color(0, 0.65, 0.9, 1)
+shader_parameter/center = Vector2(0.5, 0.5)
+shader_parameter/progress = 0.0
+shader_parameter/aspect_ratio = 1.777778
+shader_parameter/edge_softness = 0.035
+
+[node name="StartScene" type="Control" unique_id=2090384669]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=1440496823]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05490196, 0.06666667, 0.08627451, 1)
+
+[node name="HUDBackground" type="Control" parent="." unique_id=963564735]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_ptjug")
+
+[node name="MainMargin" type="MarginContainer" parent="." unique_id=721445549]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 13.0
+offset_right = -13.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 22
+
+[node name="MainLayout" type="HBoxContainer" parent="MainMargin" unique_id=279747510]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="SubjectArea" type="Control" parent="MainMargin/MainLayout" unique_id=1690295087]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+
+[node name="SubjectPanel" parent="MainMargin/MainLayout/SubjectArea" unique_id=849535497 instance=ExtResource("1_kyjdd")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = -10.0
+offset_right = 0.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubjectMargin" type="MarginContainer" parent="MainMargin/MainLayout/SubjectArea" unique_id=913605009]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -42.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="SubjectLayout" type="VBoxContainer" parent="MainMargin/MainLayout/SubjectArea/SubjectMargin" unique_id=1196814415]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SubjectTitleMargin" type="MarginContainer" parent="MainMargin/MainLayout/SubjectArea/SubjectMargin/SubjectLayout" unique_id=1295861265]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 6
+
+[node name="SubjectTitle" type="Label" parent="MainMargin/MainLayout/SubjectArea/SubjectMargin/SubjectLayout/SubjectTitleMargin" unique_id=520485263]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "
+SUBJECT // MG-01"
+
+[node name="HumanArea" type="Control" parent="MainMargin/MainLayout/SubjectArea/SubjectMargin/SubjectLayout" unique_id=569774018]
+custom_minimum_size = Vector2(0, 430)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SubjectScanner" type="Control" parent="MainMargin/MainLayout/SubjectArea/SubjectMargin/SubjectLayout/HumanArea" unique_id=603773903]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 2.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_53hov")
+
+[node name="HumanPortrait" type="TextureRect" parent="MainMargin/MainLayout/SubjectArea/SubjectMargin/SubjectLayout/HumanArea" unique_id=881516433]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.999998
+offset_top = -20.000004
+offset_right = -5.333313
+offset_bottom = 12.4999695
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.08, 1.08)
+texture = SubResource("CompressedTexture2D_h0k2m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BaselineMargin" type="MarginContainer" parent="MainMargin/MainLayout/SubjectArea/SubjectMargin/SubjectLayout" unique_id=2028032826]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 10
+
+[node name="BaselineStatus" type="VBoxContainer" parent="MainMargin/MainLayout/SubjectArea/SubjectMargin/SubjectLayout/BaselineMargin" unique_id=1105356508]
+layout_mode = 2
+
+[node name="BaselineLabel" type="Label" parent="MainMargin/MainLayout/SubjectArea/SubjectMargin/SubjectLayout/BaselineMargin/BaselineStatus" unique_id=1160463326]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+text = "BASELINE PHENOTYPE"
+
+[node name="StatusLabel" type="Label" parent="MainMargin/MainLayout/SubjectArea/SubjectMargin/SubjectLayout/BaselineMargin/BaselineStatus" unique_id=1322057480]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91764706, 0.9843137, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "·  STABLE"
+
+[node name="ECGVisual" type="Control" parent="MainMargin/MainLayout/SubjectArea/SubjectMargin/SubjectLayout/BaselineMargin/BaselineStatus" unique_id=245666247]
+custom_minimum_size = Vector2(58, 20)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("4_cfqn4")
+
+[node name="ZoomPoint" type="Marker2D" parent="MainMargin/MainLayout/SubjectArea/SubjectMargin/SubjectLayout" unique_id=340565981]
+position = Vector2(155, 246)
+
+[node name="RightArea" type="Control" parent="MainMargin/MainLayout" unique_id=1343437682]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RightLayout" type="VBoxContainer" parent="MainMargin/MainLayout/RightArea" unique_id=2086310888]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_right = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="TitleArea" type="VBoxContainer" parent="MainMargin/MainLayout/RightArea/RightLayout" unique_id=1976016542]
+layout_mode = 2
+
+[node name="GameTitle" type="Label" parent="MainMargin/MainLayout/RightArea/RightLayout/TitleArea" unique_id=1120320753]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91764706, 0.9843137, 1, 1)
+theme_override_fonts/font = ExtResource("6_jncqt")
+theme_override_font_sizes/font_size = 57
+text = "MUTAGAME"
+
+[node name="ProtocolTitle" type="Label" parent="MainMargin/MainLayout/RightArea/RightLayout/TitleArea" unique_id=1779618317]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_fonts/font = ExtResource("6_jncqt")
+theme_override_font_sizes/font_size = 26
+text = "GENETIC ADAPTATION PROTOCOL"
+
+[node name="iGEM" type="Sprite2D" parent="MainMargin/MainLayout/RightArea/RightLayout" unique_id=1611343554]
+position = Vector2(572.00006, 21.500006)
+scale = Vector2(0.025173275, 0.023857657)
+texture = ExtResource("6_k2do7")
+
+[node name="UB" type="Sprite2D" parent="MainMargin/MainLayout/RightArea/RightLayout" unique_id=2120830011]
+position = Vector2(638.00006, 22.5)
+scale = Vector2(0.20937482, 0.19687498)
+texture = ExtResource("6_33mov")
+
+[node name="MissionArea" type="VBoxContainer" parent="MainMargin/MainLayout/RightArea/RightLayout" unique_id=1285181399]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="MissionText1" type="Label" parent="MainMargin/MainLayout/RightArea/RightLayout/MissionArea" unique_id=1621134678]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91764706, 0.9843137, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "Subject MG-01 is preparing for a high-risk space mission."
+autowrap_mode = 3
+
+[node name="Separator1" type="Label" parent="MainMargin/MainLayout/RightArea/RightLayout/MissionArea" unique_id=1522098400]
+layout_mode = 2
+script = ExtResource("4_53hov")
+
+[node name="MissionText2" type="Label" parent="MainMargin/MainLayout/RightArea/RightLayout/MissionArea" unique_id=1949314631]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91764706, 0.9843137, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "Modify their DNA using different mutagenic agents and alter their phenotype."
+autowrap_mode = 3
+
+[node name="Separator2" type="Label" parent="MainMargin/MainLayout/RightArea/RightLayout/MissionArea" unique_id=574123478]
+layout_mode = 2
+script = ExtResource("4_53hov")
+
+[node name="MissionText3" type="Label" parent="MainMargin/MainLayout/RightArea/RightLayout/MissionArea" unique_id=1680350362]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91764706, 0.9843137, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "Your objective is to increase their chances of survival and ensure they return to Earth in the best possible condition.
+"
+autowrap_mode = 3
+
+[node name="BottomArea" type="HBoxContainer" parent="MainMargin/MainLayout/RightArea/RightLayout" unique_id=1806958994]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 26
+
+[node name="MedicalArea" type="Control" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea" unique_id=1657258827]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[node name="SciFiPanelV2" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/MedicalArea" unique_id=1473503072 instance=ExtResource("9_e4bpb")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MedicalPanel" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/MedicalArea" unique_id=968574057 instance=ExtResource("3_jfucu")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 13.0
+offset_right = -15.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MedicalMargin" type="MarginContainer" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/MedicalArea" unique_id=1237552726]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.5
+offset_top = 9.5
+offset_right = -2.5
+offset_bottom = -11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 18
+
+[node name="MedicalLayout" type="VBoxContainer" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/MedicalArea/MedicalMargin" unique_id=1243490337]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="MedicalTitle" type="Label" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/MedicalArea/MedicalMargin/MedicalLayout" unique_id=1733610303]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "SUBJECT BASELINE STATUS"
+
+[node name="DataRows" type="VBoxContainer" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/MedicalArea/MedicalMargin/MedicalLayout" unique_id=1004123754]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="RadiationRow" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/MedicalArea/MedicalMargin/MedicalLayout/DataRows" unique_id=1229170438 instance=ExtResource("10_8glg8")]
+layout_mode = 2
+icon_texture = ExtResource("12_wrdj4")
+parameter_name = "RADIATION PROTECTION"
+status_text = "LOW"
+active_bars = 2
+accent_color = Color(0.8352941, 0.36862746, 0, 1)
+
+[node name="RegenerationRow" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/MedicalArea/MedicalMargin/MedicalLayout/DataRows" unique_id=165609254 instance=ExtResource("10_8glg8")]
+layout_mode = 2
+icon_texture = ExtResource("13_n7f12")
+parameter_name = "CELL REGENERATION"
+status_text = "BASELINE"
+active_bars = 3
+
+[node name="ImmuneRow" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/MedicalArea/MedicalMargin/MedicalLayout/DataRows" unique_id=701842738 instance=ExtResource("10_8glg8")]
+layout_mode = 2
+icon_texture = ExtResource("14_0s3qj")
+parameter_name = "IMMUNE SYSTEM"
+active_bars = 3
+
+[node name="OxidativeRow" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/MedicalArea/MedicalMargin/MedicalLayout/DataRows" unique_id=209375777 instance=ExtResource("10_8glg8")]
+layout_mode = 2
+icon_texture = ExtResource("15_5tv0e")
+parameter_name = "ANTIOXIDANT PROTECTION"
+active_bars = 3
+
+[node name="GeneticRow" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/MedicalArea/MedicalMargin/MedicalLayout/DataRows" unique_id=299558910 instance=ExtResource("10_8glg8")]
+layout_mode = 2
+icon_texture = ExtResource("16_ahqkt")
+parameter_name = "GENETIC STABILITY"
+active_bars = 3
+
+[node name="StartArea" type="Control" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea" unique_id=1240599506]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+script = ExtResource("5_ejy2n")
+
+[node name="StartPanel" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/StartArea" unique_id=1040271553 instance=ExtResource("3_jfucu")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 12.0
+offset_right = -13.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartBackground" type="Panel" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/StartArea" unique_id=1046619463]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.5
+offset_top = 10.0
+offset_right = -4.5
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jncqt")
+
+[node name="StartGlow" type="Control" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/StartArea" unique_id=964931281]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.5
+offset_top = -2.0
+offset_right = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("12_h0k2m")
+frame_color = Color(0.4, 0.9019608, 1, 1)
+fill_color = Color(0.062399995, 0.11770666, 0.16, 0)
+inner_color = Color(0, 0, 0, 0)
+line_width = 8.0
+draw_fill = false
+draw_inner_frame = false
+draw_details = false
+
+[node name="StartFrame" type="Control" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/StartArea" unique_id=64494222]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.5
+offset_top = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("12_h0k2m")
+frame_color = Color(0.34901962, 0.9098039, 1, 1)
+fill_color = Color(0.0627451, 0.11764706, 0.16078432, 1)
+inner_color = Color(0.34901962, 0.9098039, 1, 0.33333334)
+
+[node name="StartMargin" type="MarginContainer" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/StartArea" unique_id=2000060774]
+z_index = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.5
+offset_top = 13.0
+offset_right = -6.5
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 18
+
+[node name="StartLayout" type="VBoxContainer" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/StartArea/StartMargin" unique_id=611724740]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="StartTitle" type="Label" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/StartArea/StartMargin/StartLayout" unique_id=61149586]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91764706, 0.9843137, 1, 1)
+theme_override_fonts/font = ExtResource("6_jncqt")
+theme_override_font_sizes/font_size = 30
+text = "INITIATE 
+PROTOCOL"
+horizontal_alignment = 1
+
+[node name="ArrowArea" type="Control" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/StartArea/StartMargin/StartLayout" unique_id=80141445]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+
+[node name="StartArrow" type="Label" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/StartArea/StartMargin/StartLayout/ArrowArea" unique_id=633503420]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -29.0
+offset_right = 93.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_font_sizes/font_size = 42
+text = ">"
+horizontal_alignment = 1
+
+[node name="ProtocolStatus" type="Label" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/StartArea/StartMargin/StartLayout" unique_id=470429182]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "SEQUENCE READY"
+horizontal_alignment = 1
+
+[node name="ClickArea" type="Button" parent="MainMargin/MainLayout/RightArea/RightLayout/BottomArea/StartArea" unique_id=182261359]
+z_index = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+flat = true
+
+[node name="TransitionFlash" type="ColorRect" parent="." unique_id=1213949377]
+material = SubResource("ShaderMaterial_4a4tu")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.4, 0.9019608, 1, 1)
+
+[node name="ScreenFrame" type="Control" parent="." unique_id=1264581625]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("7_bg18w")

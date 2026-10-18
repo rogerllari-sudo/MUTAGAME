@@ -1,0 +1,168 @@
+[gd_scene format=3 uid="uid://bkhxxt67ejdxd"]
+
+[ext_resource type="Script" uid="uid://qdn87775guaf" path="res://ui/panels/status_row.gd" id="1_lt5cs"]
+
+[node name="StatusRow" type="Control" unique_id=1229170438]
+custom_minimum_size = Vector2(250, 34)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 349.0
+offset_bottom = 40.0
+script = ExtResource("1_lt5cs")
+parameter_name = "ESTABILITAT GENÈTICA"
+status_text = "NORMAL"
+active_bars = 5
+accent_color = Color(0.4, 0.9, 1, 1)
+result_accent_color = Color(0, 0.44705883, 0.69803923, 1)
+
+[node name="MainLayout" type="HBoxContainer" parent="." unique_id=494167339]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_right = 2.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="IconArea" type="Control" parent="MainLayout" unique_id=554470729]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="MainLayout/IconArea" unique_id=1600677727]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 2.5
+offset_right = 20.0
+offset_bottom = 27.5
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NameLabel" type="Label" parent="MainLayout" unique_id=400046746]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.9019608, 0.94509804, 0.9607843, 1)
+theme_override_font_sizes/font_size = 14
+text = "ESTABILITAT GENÈTICA"
+
+[node name="Spacer" type="Control" parent="MainLayout" unique_id=268247958]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+
+[node name="ValueLabel" type="Label" parent="MainLayout" unique_id=1890347640]
+custom_minimum_size = Vector2(52, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.4, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "NORMAL"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ValueSpacer" type="Control" parent="MainLayout" unique_id=1589885041]
+custom_minimum_size = Vector2(7, 0)
+layout_mode = 2
+
+[node name="LevelBars" type="HBoxContainer" parent="MainLayout" unique_id=1915183581]
+custom_minimum_size = Vector2(34, 20)
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 5.93
+theme_override_constants/separation = 2
+
+[node name="Bar1" type="ColorRect" parent="MainLayout/LevelBars" unique_id=1977469607]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+color = Color(0.4, 0.9, 1, 1)
+
+[node name="Bar2" type="ColorRect" parent="MainLayout/LevelBars" unique_id=1925527241]
+custom_minimum_size = Vector2(4, 7)
+layout_mode = 2
+color = Color(0.4, 0.9, 1, 1)
+
+[node name="Bar3" type="ColorRect" parent="MainLayout/LevelBars" unique_id=179504689]
+custom_minimum_size = Vector2(4, 7)
+layout_mode = 2
+color = Color(0.4, 0.9, 1, 1)
+
+[node name="Bar4" type="ColorRect" parent="MainLayout/LevelBars" unique_id=1593931780]
+custom_minimum_size = Vector2(4, 7)
+layout_mode = 2
+color = Color(0.4, 0.9, 1, 1)
+
+[node name="Bar5" type="ColorRect" parent="MainLayout/LevelBars" unique_id=763686074]
+custom_minimum_size = Vector2(4, 7)
+layout_mode = 2
+color = Color(0.4, 0.9, 1, 1)
+
+[node name="CompareSpacer" type="Control" parent="MainLayout" unique_id=851362077]
+visible = false
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="ArrowLabel" type="Label" parent="MainLayout" unique_id=586053617]
+visible = false
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.9, 1, 1)
+text = ">"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResultValueLabel" type="Label" parent="MainLayout" unique_id=2010130701]
+visible = false
+custom_minimum_size = Vector2(52, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.44705883, 0.69803923, 1)
+theme_override_font_sizes/font_size = 12
+text = "ALTA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResultValueSpacer" type="Control" parent="MainLayout" unique_id=1861143036]
+visible = false
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+
+[node name="ResultLevelBars" type="HBoxContainer" parent="MainLayout" unique_id=1313966194]
+visible = false
+custom_minimum_size = Vector2(45, 20)
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 5.93
+theme_override_constants/separation = 2
+
+[node name="Bar1" type="ColorRect" parent="MainLayout/ResultLevelBars" unique_id=212980320]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+color = Color(0, 0.44705883, 0.69803923, 1)
+
+[node name="Bar2" type="ColorRect" parent="MainLayout/ResultLevelBars" unique_id=1400767780]
+custom_minimum_size = Vector2(4, 7)
+layout_mode = 2
+color = Color(0, 0.44705883, 0.69803923, 1)
+
+[node name="Bar3" type="ColorRect" parent="MainLayout/ResultLevelBars" unique_id=416213628]
+custom_minimum_size = Vector2(4, 7)
+layout_mode = 2
+color = Color(0, 0.44705883, 0.69803923, 1)
+
+[node name="Bar4" type="ColorRect" parent="MainLayout/ResultLevelBars" unique_id=1629821510]
+custom_minimum_size = Vector2(4, 7)
+layout_mode = 2
+color = Color(0, 0.44705883, 0.69803923, 1)
+
+[node name="Bar5" type="ColorRect" parent="MainLayout/ResultLevelBars" unique_id=136649310]
+custom_minimum_size = Vector2(4, 7)
+layout_mode = 2
+color = Color(0.08, 0.2, 0.27, 1)
+
+[node name="Separator" type="ColorRect" parent="MainLayout" unique_id=2057648908]
+layout_mode = 2
+color = Color(0.39999998, 0.9, 1, 0.16470589)

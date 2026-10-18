@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://p05vv7iv8ive"]
+
+[node name="HydrogenBonds" type="Node2D" unique_id=1372288177]
+position = Vector2(143, 88)
+
+[node name="Bond1" type="Line2D" parent="." unique_id=358730832]
+points = PackedVector2Array(-45, -8, 45, -8)
+width = 3.0
+default_color = Color(0.4, 0.9019608, 1, 1)
+
+[node name="Bond2" type="Line2D" parent="." unique_id=1820629097]
+points = PackedVector2Array(-45, 0, 45, 0)
+width = 3.0
+default_color = Color(0.4, 0.9019608, 1, 1)
+
+[node name="Bond3" type="Line2D" parent="." unique_id=898932364]
+points = PackedVector2Array(-45, 8, 45, 8)
+width = 3.0
+default_color = Color(0.4, 0.9019608, 1, 1)

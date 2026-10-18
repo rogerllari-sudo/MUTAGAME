@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://baxewsyula7jo"]
+
+[ext_resource type="Script" uid="uid://b5wr2sns4jgwe" path="res://ui/human/human_visual.gd" id="1_1tw8j"]
+
+[node name="HumanVisual" type="Node2D" unique_id=1041905029]
+script = ExtResource("1_1tw8j")

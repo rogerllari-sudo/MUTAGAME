@@ -1,0 +1,679 @@
+[gd_scene format=3 uid="uid://d1oq5i5q6frn3"]
+
+[ext_resource type="Script" uid="uid://bu3xym6sbgguv" path="res://final_scene.gd" id="1_jremd"]
+[ext_resource type="Texture2D" uid="uid://myiqge1di3ao" path="res://ui/background/DEFIFINAL.png" id="2_sdbl0"]
+[ext_resource type="Script" uid="uid://bh5hmg5k2efuf" path="res://result_banner_frame.gd" id="3_h5r04"]
+[ext_resource type="Texture2D" uid="uid://b1fwopcvfuhpt" path="res://ui/background/bioparametres.png" id="3_hiaf7"]
+[ext_resource type="PackedScene" uid="uid://bkhxxt67ejdxd" path="res://ui/panels/StatusRow.tscn" id="3_vh3px"]
+[ext_resource type="Texture2D" uid="uid://dny74qxhvi3do" path="res://ui/background/diganosis .png" id="4_03s3o"]
+[ext_resource type="Texture2D" uid="uid://bi5r28k17orpo" path="res://ui/icons/tick.png" id="4_57oah"]
+[ext_resource type="FontFile" uid="uid://bnmgfp11fn2kf" path="res://fonts/Oxanium-SemiBold.ttf" id="4_h5r04"]
+[ext_resource type="Script" uid="uid://bwmfjvotso6ua" path="res://return_button.gd" id="4_sdbl0"]
+[ext_resource type="Script" uid="uid://b16eyo6sbuh2t" path="res://ui/buttons/execute_frame.gd" id="6_xygxo"]
+[ext_resource type="Texture2D" uid="uid://2bla3vabsvty" path="res://ui/gene_icons/gene_alpha.png" id="8_b4t68"]
+[ext_resource type="Texture2D" uid="uid://e0lu52x81v8r" path="res://ui/human/ub lgoo png.png" id="8_xo8kt"]
+[ext_resource type="Texture2D" uid="uid://bbrnq8pxrur81" path="res://ui/gene_icons/gene_beta.png" id="9_57oah"]
+[ext_resource type="Texture2D" uid="uid://ctbdei83u0pva" path="res://ui/buttons/PNG igem.png" id="9_xygxo"]
+[ext_resource type="Texture2D" uid="uid://b44md8sxl48xd" path="res://ui/gene_icons/gene_gamma.png" id="10_lucjh"]
+[ext_resource type="Texture2D" uid="uid://lk7sckbdt5hf" path="res://ui/gene_icons/gene_epsilon.png" id="11_hiaf7"]
+[ext_resource type="Texture2D" uid="uid://cyhef8hrnndbc" path="res://ui/gene_icons/gene_delta.png" id="12_03s3o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vh3px"]
+bg_color = Color(0.031999998, 0.08, 0.064, 0)
+border_color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0.38220003, 0.91, 0.5669301, 0)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jremd"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.38431373, 0.9098039, 0.5647059, 0.20784314)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.38431373, 0.9098039, 0.5647059, 0.33333334)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iu4q0"]
+bg_color = Color(0.03137255, 0.101960786, 0.0627451, 0.9019608)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0.38431373, 0.9098039, 0.5647059, 0.13333334)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xo8kt"]
+bg_color = Color(0.6, 0.6, 0.6, 0.07058824)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h0k2m"]
+load_path = "res://.godot/imported/(old)alpha_neutral.png-921c6e3ec75e3f4f7d387d84825191be.ctex"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agcwu"]
+bg_color = Color(0.0627451, 0.11764706, 0.16078432, 0.5058824)
+border_color = Color(0.22352941, 0.84705883, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0.22352941, 0.84705883, 1, 0.2509804)
+
+[node name="FinalScene" type="Control" unique_id=1872149699]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 7.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jremd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1013133053]
+position = Vector2(576.00006, 324.82764)
+scale = Vector2(0.68899524, 0.6911208)
+texture = ExtResource("2_sdbl0")
+
+[node name="paramteres biol" type="Sprite2D" parent="." unique_id=1140277808]
+position = Vector2(283, 114)
+scale = Vector2(0.8628692, 0.8214286)
+texture = ExtResource("3_hiaf7")
+
+[node name="diagnosis" type="Sprite2D" parent="." unique_id=1149600594]
+position = Vector2(971.25, 117)
+scale = Vector2(0.8304348, 0.8148148)
+texture = ExtResource("4_03s3o")
+
+[node name="FinalUI" type="Control" parent="." unique_id=460454387]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ResultBanner" type="Panel" parent="FinalUI" unique_id=2085111566]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 12.0
+offset_right = 991.0
+offset_bottom = 75.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh3px")
+
+[node name="BannerGlow" type="Panel" parent="FinalUI/ResultBanner" unique_id=1192545283]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jremd")
+
+[node name="BannerCore" type="Panel" parent="FinalUI/ResultBanner" unique_id=510010135]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iu4q0")
+
+[node name="HUDFrame" type="Control" parent="FinalUI/ResultBanner" unique_id=1315526412]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_h5r04")
+
+[node name="TopAccent" type="ColorRect" parent="FinalUI/ResultBanner" unique_id=1490612543]
+visible = false
+layout_mode = 0
+offset_left = 18.0
+offset_top = 5.0
+offset_right = 762.0
+offset_bottom = 6.0
+mouse_filter = 2
+color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+
+[node name="BottomAccent" type="ColorRect" parent="FinalUI/ResultBanner" unique_id=524591026]
+visible = false
+layout_mode = 0
+offset_left = 21.0
+offset_top = 45.0
+offset_right = 731.0
+offset_bottom = 46.0
+mouse_filter = 2
+color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+
+[node name="LeftNotch" type="ColorRect" parent="FinalUI/ResultBanner" unique_id=1755221563]
+visible = false
+layout_mode = 0
+offset_left = 9.0
+offset_top = 2.0
+offset_right = 10.0
+offset_bottom = 45.0
+mouse_filter = 2
+color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+
+[node name="RightNotch" type="ColorRect" parent="FinalUI/ResultBanner" unique_id=1284273755]
+visible = false
+layout_mode = 0
+offset_left = 763.0
+offset_top = 12.0
+offset_right = 764.0
+offset_bottom = 45.0
+mouse_filter = 2
+color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+
+[node name="IconFrame" type="Panel" parent="FinalUI/ResultBanner" unique_id=1500149438]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 12.0
+offset_right = 68.0
+offset_bottom = 53.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xo8kt")
+
+[node name="ResultIcon" type="Label" parent="FinalUI/ResultBanner" unique_id=1682886143]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 12.0
+offset_right = 67.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+theme_override_font_sizes/font_size = 29
+text = "✓"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BenefitTick" type="TextureRect" parent="FinalUI/ResultBanner/ResultIcon" unique_id=1161514323]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("4_57oah")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ResultTitle" type="Label" parent="FinalUI/ResultBanner" unique_id=1599485245]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 13.0
+offset_right = 406.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+theme_override_fonts/font = ExtResource("4_h5r04")
+theme_override_font_sizes/font_size = 26
+text = "RESULTAT BENEFICIÓS:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResultSubtitle" type="Label" parent="FinalUI/ResultBanner" unique_id=1838915854]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 18.0
+offset_right = 840.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.8509804, 1, 0.9019608, 1)
+theme_override_font_sizes/font_size = 14
+text = "LA MUTACIÓ HA TINGUT UN IMPACTE POSITIU EN EL SUBJECTE"
+vertical_alignment = 1
+
+[node name="SubjectArea" type="Control" parent="FinalUI" unique_id=516860765]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 555.0
+offset_top = 113.0
+offset_right = 833.0
+offset_bottom = 644.0
+pivot_offset = Vector2(108, 250)
+
+[node name="Human" type="TextureRect" parent="FinalUI/SubjectArea" unique_id=862195824]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 23.0
+offset_right = 8.0
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("CompressedTexture2D_h0k2m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DiagnosisFragment" type="Label" parent="FinalUI" unique_id=1757502902]
+layout_mode = 0
+offset_left = 887.0
+offset_top = 162.0
+offset_right = 988.0
+offset_bottom = 185.0
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 0.8)
+theme_override_font_sizes/font_size = 13
+text = "FRAGMENT α"
+
+[node name="DiagnosisFunction" type="Label" parent="FinalUI" unique_id=73770156]
+layout_mode = 0
+offset_left = 887.0
+offset_top = 179.0
+offset_right = 1053.0
+offset_bottom = 202.0
+theme_override_font_sizes/font_size = 15
+text = "ESCUT ANTIRADIACIÓ"
+
+[node name="DiagnosisText" type="RichTextLabel" parent="FinalUI" unique_id=450239426]
+layout_mode = 0
+offset_left = 888.0
+offset_top = 215.0
+offset_right = 1113.0
+offset_bottom = 301.0
+theme_override_font_sizes/normal_font_size = 14
+text = "L'anàlisi mostra una alteració en la protecció de la radiació.
+Ha incrementat la resposta cel·lular ..."
+scroll_active = false
+
+[node name="ImpactArea" type="Control" parent="FinalUI" unique_id=35937729]
+anchors_preset = 0
+offset_left = 878.0
+offset_top = 328.0
+offset_right = 1113.0
+offset_bottom = 452.0
+
+[node name="ImpactDivider" type="ColorRect" parent="FinalUI/ImpactArea" unique_id=1502282669]
+layout_mode = 0
+offset_left = 20.0
+offset_top = -12.0
+offset_right = 220.0
+offset_bottom = -10.0
+color = Color(0.0912, 0.3126134, 0.38, 1)
+
+[node name="ImpactLabel" type="Label" parent="FinalUI/ImpactArea" unique_id=1702556003]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 233.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "PRIMARY IMPACT"
+horizontal_alignment = 1
+
+[node name="ImpactParameter" type="Label" parent="FinalUI/ImpactArea" unique_id=1703510535]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 20.0
+offset_right = 235.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.8509804, 0.96862745, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "PROTECCIÓ RADIACIÓ"
+horizontal_alignment = 1
+
+[node name="ImpactBefore" type="Label" parent="FinalUI/ImpactArea" unique_id=470077293]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 85.0
+offset_bottom = 78.0
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_font_sizes/font_size = 11
+text = "BAIXA"
+
+[node name="ImpactArrow" type="Label" parent="FinalUI/ImpactArea" unique_id=1812981210]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 69.0
+offset_right = 150.0
+offset_bottom = 97.0
+theme_override_colors/font_color = Color(0.24705882, 0.6862745, 0.76862746, 1)
+text = ">"
+horizontal_alignment = 1
+
+[node name="ImpactAfter" type="Label" parent="FinalUI/ImpactArea" unique_id=1109892814]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 60.0
+offset_right = 218.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 11
+text = "BAIXA"
+
+[node name="ImpactBeforeBars" type="HBoxContainer" parent="FinalUI/ImpactArea" unique_id=1415908855]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 88.0
+offset_right = 99.0
+offset_bottom = 108.0
+theme_override_constants/separation = 6
+
+[node name="Bar1" type="ColorRect" parent="FinalUI/ImpactArea/ImpactBeforeBars" unique_id=839250185]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
+[node name="Bar2" type="ColorRect" parent="FinalUI/ImpactArea/ImpactBeforeBars" unique_id=1348658393]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
+[node name="Bar3" type="ColorRect" parent="FinalUI/ImpactArea/ImpactBeforeBars" unique_id=842244676]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
+[node name="Bar4" type="ColorRect" parent="FinalUI/ImpactArea/ImpactBeforeBars" unique_id=32619888]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
+[node name="Bar5" type="ColorRect" parent="FinalUI/ImpactArea/ImpactBeforeBars" unique_id=1055076930]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
+[node name="ImpactAfterBars" type="HBoxContainer" parent="FinalUI/ImpactArea" unique_id=816760513]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 88.0
+offset_right = 228.0
+offset_bottom = 108.0
+theme_override_constants/separation = 6
+
+[node name="Bar1" type="ColorRect" parent="FinalUI/ImpactArea/ImpactAfterBars" unique_id=1691152474]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
+[node name="Bar2" type="ColorRect" parent="FinalUI/ImpactArea/ImpactAfterBars" unique_id=1940141858]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
+[node name="Bar3" type="ColorRect" parent="FinalUI/ImpactArea/ImpactAfterBars" unique_id=312021309]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
+[node name="Bar4" type="ColorRect" parent="FinalUI/ImpactArea/ImpactAfterBars" unique_id=205564357]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
+[node name="Bar5" type="ColorRect" parent="FinalUI/ImpactArea/ImpactAfterBars" unique_id=156134391]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+
+[node name="ScanLine" type="ColorRect" parent="FinalUI/ImpactArea" unique_id=1838858464]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -5.0
+offset_right = 230.0
+offset_bottom = -4.0
+pivot_offset = Vector2(0, 1)
+color = Color(0.4, 0.9019608, 1, 0.78431374)
+
+[node name="RecommendationTitle" type="Label" parent="FinalUI" unique_id=2120101129]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 510.0
+offset_right = 437.0
+offset_bottom = 533.0
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_font_sizes/font_size = 15
+text = "ANALYSIS GUIDANCE"
+
+[node name="RecommendationText" type="RichTextLabel" parent="FinalUI" unique_id=1570576750]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 536.0
+offset_right = 512.0
+offset_bottom = 605.0
+theme_override_colors/default_color = Color(0.8509804, 0.96862745, 1, 1)
+theme_override_font_sizes/normal_font_size = 15
+text = "Mutations can have unpredictable effects.
+More mutagens do not guarantee better results.
+Follow the recommended strategy."
+
+[node name="ReturnPanel" type="Control" parent="FinalUI" unique_id=1568478607]
+custom_minimum_size = Vector2(250, 0)
+anchors_preset = 0
+offset_left = 849.0
+offset_top = 484.0
+offset_right = 1141.0
+offset_bottom = 633.0
+size_flags_horizontal = 0
+script = ExtResource("4_sdbl0")
+
+[node name="ReturnBackground" type="Panel" parent="FinalUI/ReturnPanel" unique_id=342473351]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_agcwu")
+
+[node name="ReturnGlow" type="Control" parent="FinalUI/ReturnPanel" unique_id=2126532596]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("6_xygxo")
+frame_color = Color(0.4, 0.9019608, 1, 1)
+fill_color = Color(0.062399995, 0.11770666, 0.16, 0)
+inner_color = Color(0, 0, 0, 0)
+line_width = 8.0
+draw_fill = false
+draw_inner_frame = false
+draw_details = false
+
+[node name="ReturnFrame" type="Control" parent="FinalUI/ReturnPanel" unique_id=127819671]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("6_xygxo")
+frame_color = Color(0.34901962, 0.9098039, 1, 1)
+fill_color = Color(0.0627451, 0.11764706, 0.16078432, 1)
+inner_color = Color(0.34901962, 0.9098039, 1, 0.33333334)
+
+[node name="ReturnMargin" type="MarginContainer" parent="FinalUI/ReturnPanel" unique_id=149827811]
+z_index = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = -6.0
+offset_right = -6.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 18
+
+[node name="ReturnLayout" type="VBoxContainer" parent="FinalUI/ReturnPanel/ReturnMargin" unique_id=1091034665]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="ReturnTitle" type="Label" parent="FinalUI/ReturnPanel/ReturnMargin/ReturnLayout" unique_id=476295247]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91764706, 0.9843137, 1, 1)
+theme_override_fonts/font = ExtResource("4_h5r04")
+theme_override_font_sizes/font_size = 28
+text = "NEW ANALYSIS"
+horizontal_alignment = 1
+
+[node name="ReturnStatus" type="Label" parent="FinalUI/ReturnPanel/ReturnMargin/ReturnLayout" unique_id=267660312]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_fonts/font = ExtResource("4_h5r04")
+theme_override_font_sizes/font_size = 19
+text = "· REPEAT TEST · "
+horizontal_alignment = 1
+
+[node name="ClickArea" type="Button" parent="FinalUI/ReturnPanel" unique_id=1542986514]
+z_index = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+flat = true
+
+[node name="BiologicalStats" type="Control" parent="." unique_id=725951384]
+visible = false
+anchors_preset = 0
+offset_left = 18.0
+offset_top = 102.0
+offset_right = 493.0
+offset_bottom = 481.0
+mouse_filter = 2
+
+[node name="RadiationRow" type="Control" parent="BiologicalStats" unique_id=851319360]
+anchors_preset = 0
+offset_left = 18.0
+offset_top = 60.0
+offset_right = 336.0
+offset_bottom = 99.0
+
+[node name="BaselineArea" type="Control" parent="." unique_id=1040389007]
+custom_minimum_size = Vector2(400, 0)
+anchors_preset = 0
+offset_left = 26.0
+offset_top = 129.0
+offset_right = 530.0
+offset_bottom = 437.0
+
+[node name="MedicalMargin" type="MarginContainer" parent="BaselineArea" unique_id=736913412]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 5.0
+offset_right = 516.0
+offset_bottom = 339.0
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 18
+
+[node name="MedicalLayout" type="VBoxContainer" parent="BaselineArea/MedicalMargin" unique_id=1980902875]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ESTAT BASAL" type="Label" parent="BaselineArea/MedicalMargin/MedicalLayout" unique_id=1186626011]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_font_sizes/font_size = 17
+text = "ESTAT BASAL DEL SUBJECTE"
+
+[node name="DataRows" type="VBoxContainer" parent="BaselineArea/MedicalMargin/MedicalLayout" unique_id=239495865]
+layout_mode = 2
+theme_override_constants/separation = 27
+
+[node name="RadiationRow" parent="BaselineArea/MedicalMargin/MedicalLayout/DataRows" unique_id=1229170438 instance=ExtResource("3_vh3px")]
+layout_mode = 2
+icon_texture = ExtResource("8_b4t68")
+parameter_name = "RADIATION PROTECTION"
+status_text = "LOW"
+active_bars = 2
+show_result = true
+result_status_text = "HIGH"
+accent_color = Color(0.8352941, 0.36862746, 0, 1)
+
+[node name="RegenerationRow" parent="BaselineArea/MedicalMargin/MedicalLayout/DataRows" unique_id=822542765 instance=ExtResource("3_vh3px")]
+layout_mode = 2
+icon_texture = ExtResource("9_57oah")
+parameter_name = "CELL REGENERATION "
+status_text = "BASELINE"
+active_bars = 3
+show_result = true
+result_status_text = "HIGH"
+
+[node name="ImmuneRow" parent="BaselineArea/MedicalMargin/MedicalLayout/DataRows" unique_id=1895484590 instance=ExtResource("3_vh3px")]
+layout_mode = 2
+icon_texture = ExtResource("10_lucjh")
+parameter_name = "IMMUNE SYSTEM"
+status_text = "BASELINE"
+active_bars = 3
+show_result = true
+result_status_text = "HIGH"
+
+[node name="OxidativeRow" parent="BaselineArea/MedicalMargin/MedicalLayout/DataRows" unique_id=987585467 instance=ExtResource("3_vh3px")]
+layout_mode = 2
+icon_texture = ExtResource("11_hiaf7")
+parameter_name = "ANTIOXIDANT PROTECTION"
+status_text = "BASELINE"
+active_bars = 3
+show_result = true
+result_status_text = "HIGH"
+
+[node name="GeneticRow" parent="BaselineArea/MedicalMargin/MedicalLayout/DataRows" unique_id=1284393362 instance=ExtResource("3_vh3px")]
+layout_mode = 2
+icon_texture = ExtResource("12_03s3o")
+parameter_name = "GENETIC STABILITY"
+status_text = "BASELINE"
+active_bars = 3
+show_result = true
+result_status_text = "HIGH"
+
+[node name="UB" type="Sprite2D" parent="." unique_id=50806069]
+position = Vector2(1101.5, 42.500004)
+scale = Vector2(0.1093747, 0.10937501)
+texture = ExtResource("8_xo8kt")
+
+[node name="iGEM" type="Sprite2D" parent="." unique_id=1092054456]
+position = Vector2(1069.5001, 42)
+scale = Vector2(0.012769057, 0.012131013)
+texture = ExtResource("9_xygxo")

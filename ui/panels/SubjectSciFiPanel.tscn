@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bqnkdqjw1qlf"]
+
+[ext_resource type="Script" uid="uid://dnooo61b3l0v3" path="res://ui/panels/corner_decor.gd" id="1_vw3p6"]
+[ext_resource type="Script" uid="uid://bh1dpecbtivyn" path="res://ui/panels/subject_accent_decor.gd" id="2_07ugg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_821fq"]
+bg_color = Color(0.0627451, 0.09411765, 0.1254902, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.22352941, 0.84705883, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.22352941, 0.84705883, 1, 0.2)
+shadow_size = 7
+
+[node name="SubjectSciFiPanel" type="Control" unique_id=849535497]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 57.0
+offset_right = 680.0
+offset_bottom = 407.0
+mouse_filter = 2
+
+[node name="Base" type="Panel" parent="." unique_id=1243077841]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_821fq")
+
+[node name="Content" type="MarginContainer" parent="." unique_id=1824908768]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 4.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CornerDecor" type="Control" parent="." unique_id=1385957596]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = 22.0
+offset_right = -21.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_vw3p6")
+
+[node name="AccentDecor" type="Control" parent="." unique_id=1728494336]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_07ugg")

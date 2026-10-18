@@ -1,0 +1,723 @@
+[gd_scene format=3 uid="uid://clp81sjaek1xw"]
+
+[ext_resource type="Script" uid="uid://dapfh65v1px08" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://cpsvft2314gtf" path="res://characters/main NODNA.png" id="2_5vw27"]
+[ext_resource type="Script" uid="uid://c8pln75w7saop" path="res://ui/DNA/gene_hover.gd" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://bdxnbu0aooxml" path="res://DNAimatge prima.png" id="3_efxa6"]
+[ext_resource type="Shader" uid="uid://be4yvtii0reuo" path="res://ui/DNA/gene_hover_glow.gdshader" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://c5s1fxc5vfojt" path="res://ui/panels/SciFiPanelV2.tscn" id="6_272bh"]
+[ext_resource type="Script" uid="uid://cdt4cloyj3j2h" path="res://ui/buttons/red_action_frame.gd" id="8_5vw27"]
+[ext_resource type="Script" uid="uid://4v3wii81kmlw" path="res://ui/buttons/fragment_action_button.gd" id="8_kek77"]
+[ext_resource type="Texture2D" uid="uid://bverh48qw2pr8" path="res://ui/icons/tick.png" id="9_dg77c"]
+[ext_resource type="FontFile" uid="uid://bnmgfp11fn2kf" path="res://fonts/Oxanium-SemiBold.ttf" id="9_kek77"]
+[ext_resource type="Texture2D" uid="uid://e0lu52x81v8r" path="res://ui/human/ub lgoo png.png" id="10_efxa6"]
+[ext_resource type="Texture2D" uid="uid://ctbdei83u0pva" path="res://ui/buttons/PNG igem.png" id="11_dg77c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(108.20291, 72.6367)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lquwl"]
+shader = ExtResource("4_1bvp3")
+shader_parameter/glow_color = Color(0.4, 0.9, 1, 1)
+shader_parameter/intensity = 0.0
+shader_parameter/softness = 1.09300004865762
+
+[sub_resource type="Gradient" id="Gradient_7mycd"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_272bh"]
+gradient = SubResource("Gradient_7mycd")
+fill = 1
+fill_from = Vector2(0.3, 0.7)
+metadata/_snap_enabled = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
+radius = 96.84556
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
+shader = ExtResource("4_1bvp3")
+shader_parameter/glow_color = Color(0.4, 0.9, 1, 1)
+shader_parameter/intensity = 0.0
+shader_parameter/softness = 1.4000000632401202
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mycd"]
+shader = ExtResource("4_1bvp3")
+shader_parameter/glow_color = Color(0.4, 0.9, 1, 1)
+shader_parameter/intensity = 0.0
+shader_parameter/softness = 1.4000000632401202
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_272bh"]
+shader = ExtResource("4_1bvp3")
+shader_parameter/glow_color = Color(0.4, 0.9, 1, 1)
+shader_parameter/intensity = 0.0
+shader_parameter/softness = 1.4000000632401202
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5vw27"]
+shader = ExtResource("4_1bvp3")
+shader_parameter/glow_color = Color(0.4, 0.9, 1, 1)
+shader_parameter/intensity = 0.0
+shader_parameter/softness = 1.4000000632401202
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vw27"]
+bg_color = Color(0.043137256, 0.09411765, 0.13725491, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.15686275, 0.47843137, 0.5803922, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lquwl"]
+bg_color = Color(0.9882353, 0.9882353, 0.9882353, 0.46666667)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.015686275, 0.015686275, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
+bg_color = Color(0.2901961, 0.0627451, 0.10980392, 1)
+border_width_left = 8
+border_width_top = 8
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kek77"]
+bg_color = Color(0.20392157, 0.07058824, 0.105882354, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c57u"]
+bg_color = Color(0.035392877, 0.134496, 0.15433852, 0.03529412)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(1, 0.19, 0.2709999, 0.09019608)
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efxa6"]
+bg_color = Color(0.117599994, 0.13608, 0.21, 0.49411765)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.24705882, 0.76862746, 0.9882353, 0.5176471)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg77c"]
+bg_color = Color(0.11764706, 0.13725491, 0.21176471, 0.49411765)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.24705882, 0.76862746, 0.9882353, 0.5176471)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ycdy4"]
+bg_color = Color(0.11764706, 0.13725491, 0.21176471, 0.49411765)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.24705882, 0.76862746, 0.9882353, 0.5176471)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Main" type="Node2D" unique_id=308610433]
+position = Vector2(1, 0)
+script = ExtResource("1_0xm2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=650943068]
+position = Vector2(576.00006, 323.5)
+scale = Vector2(0.6889952, 0.69042546)
+texture = ExtResource("2_5vw27")
+
+[node name="DNA" type="Sprite2D" parent="." unique_id=784656748]
+position = Vector2(589.5, 333.50003)
+scale = Vector2(0.5266927, 0.5869141)
+texture = ExtResource("3_efxa6")
+
+[node name="Area2D" type="Area2D" parent="DNA" unique_id=383800165]
+position = Vector2(20.295975, 12.742973)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DNA/Area2D" unique_id=1069679363]
+position = Vector2(-7.954834, -47.671494)
+scale = Vector2(1, 0.9999998)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="GenePoints" type="Node2D" parent="DNA" unique_id=594322682]
+
+[node name="Gene1" type="Area2D" parent="DNA/GenePoints" unique_id=1920515360]
+position = Vector2(-598.64624, -2.8846436)
+script = ExtResource("3_1bvp3")
+
+[node name="HoverLight" type="Sprite2D" parent="DNA/GenePoints/Gene1" unique_id=462035736]
+material = SubResource("ShaderMaterial_lquwl")
+position = Vector2(1.5238658, 0.3288479)
+scale = Vector2(3.3210917, 3.5584276)
+texture = SubResource("GradientTexture2D_272bh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DNA/GenePoints/Gene1" unique_id=689147621]
+position = Vector2(-0.3747604, -3.0787063)
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Marker" type="Sprite2D" parent="DNA/GenePoints/Gene1" unique_id=2028867309]
+
+[node name="Gene2" type="Area2D" parent="DNA/GenePoints" unique_id=1884957329]
+position = Vector2(-281.94812, 46.85517)
+script = ExtResource("3_1bvp3")
+
+[node name="HoverLight" type="Sprite2D" parent="DNA/GenePoints/Gene2" unique_id=1486441835]
+material = SubResource("ShaderMaterial_1bvp3")
+position = Vector2(1.335144e-05, 1.7038403)
+scale = Vector2(3.4116192, 3.6206317)
+texture = SubResource("GradientTexture2D_272bh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DNA/GenePoints/Gene2" unique_id=658655811]
+position = Vector2(-1.5258789e-05, 1.7038269)
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Marker" type="Sprite2D" parent="DNA/GenePoints/Gene2" unique_id=322142504]
+
+[node name="Gene3" type="Area2D" parent="DNA/GenePoints" unique_id=190371819]
+position = Vector2(169.92834, 9.371017)
+script = ExtResource("3_1bvp3")
+
+[node name="HoverLight" type="Sprite2D" parent="DNA/GenePoints/Gene3" unique_id=1432834628]
+material = SubResource("ShaderMaterial_7mycd")
+position = Vector2(-51.263237, -18.742111)
+scale = Vector2(3.3065135, 3.759408)
+texture = SubResource("GradientTexture2D_272bh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DNA/GenePoints/Gene3" unique_id=651216023]
+position = Vector2(-1.8986511, 3.4076462)
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Marker" type="Sprite2D" parent="DNA/GenePoints/Gene3" unique_id=642881129]
+
+[node name="Gene4" type="Area2D" parent="DNA/GenePoints" unique_id=467580564]
+position = Vector2(426.24463, -0.8519516)
+script = ExtResource("3_1bvp3")
+
+[node name="HoverLight" type="Sprite2D" parent="DNA/GenePoints/Gene4" unique_id=2141158190]
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(-17.087679, -32.372684)
+scale = Vector2(3.2880769, 3.8336108)
+texture = SubResource("GradientTexture2D_272bh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DNA/GenePoints/Gene4" unique_id=1605624005]
+position = Vector2(0.00011301041, -8.519119)
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Marker" type="Sprite2D" parent="DNA/GenePoints/Gene4" unique_id=209949870]
+
+[node name="Gene5" type="Area2D" parent="DNA/GenePoints" unique_id=1400414068]
+position = Vector2(682.5612, -62.189728)
+script = ExtResource("3_1bvp3")
+
+[node name="HoverLight" type="Sprite2D" parent="DNA/GenePoints/Gene5" unique_id=1756951278]
+material = SubResource("ShaderMaterial_5vw27")
+position = Vector2(3.7972448, 1.703825)
+scale = Vector2(3.2176673, 3.8377805)
+texture = SubResource("GradientTexture2D_272bh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DNA/GenePoints/Gene5" unique_id=371145144]
+position = Vector2(1.898613, 3.4076843)
+shape = SubResource("CircleShape2D_0xm2m")
+
+[node name="Marker" type="Sprite2D" parent="DNA/GenePoints/Gene5" unique_id=179362005]
+
+[node name="FragmentWindow" type="Panel" parent="." unique_id=1835620870]
+offset_left = 167.0
+offset_top = 144.0
+offset_right = 1013.0
+offset_bottom = 450.0
+
+[node name="PanelV2" parent="FragmentWindow" unique_id=1473503072 instance=ExtResource("6_272bh")]
+modulate = Color(1, 1, 1, 0.84313726)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -2.0
+offset_right = -6.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IconArea" type="Control" parent="FragmentWindow" unique_id=1500194232]
+custom_minimum_size = Vector2(28, 68)
+anchors_preset = 0
+offset_left = 42.0
+offset_top = 77.0
+offset_right = 181.0
+offset_bottom = 207.0
+
+[node name="IconFrame" type="Panel" parent="FragmentWindow/IconArea" unique_id=1413902002]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5vw27")
+
+[node name="IconPlaceholder" type="TextureRect" parent="FragmentWindow/IconArea/IconFrame" unique_id=122201846]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 21.0
+offset_right = 116.0
+offset_bottom = 109.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CornerMarkTop" type="ColorRect" parent="FragmentWindow/IconArea" unique_id=1243596317]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 40.0
+offset_bottom = 11.0
+mouse_filter = 2
+color = Color(0.4, 0.9019608, 1, 0.42745098)
+
+[node name="CornerMarkBottom" type="ColorRect" parent="FragmentWindow/IconArea" unique_id=506675418]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 117.0
+offset_right = 123.0
+offset_bottom = 118.0
+mouse_filter = 2
+color = Color(0.4, 0.9019608, 1, 0.42745098)
+
+[node name="Title" type="Label" parent="FragmentWindow" unique_id=1304352963]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 218.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "FRAGMENT GENÈTIC #1"
+
+[node name="Function" type="Label" parent="FragmentWindow" unique_id=1428211981]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 79.0
+offset_right = 518.0
+offset_bottom = 115.0
+theme_override_colors/font_color = Color(0.91764706, 0.9843137, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "Reparació de l'ADN"
+
+[node name="Description" type="Label" parent="FragmentWindow" unique_id=501145601]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 117.0
+offset_right = 611.0
+offset_bottom = 226.0
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 15
+text = "Aquest gen participa en la reparació 
+dels danys produïts per  la radiació. 
+Les mutacions en aquest gen poden fer que 
+la cèl·lula repari millor o pitjor el seu ADN."
+autowrap_mode = 2
+
+[node name="MetadataRow" type="HBoxContainer" parent="FragmentWindow" unique_id=427759372]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 239.0
+offset_right = 662.0
+offset_bottom = 293.0
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="TypeBlock" type="VBoxContainer" parent="FragmentWindow/MetadataRow" unique_id=1690071480]
+custom_minimum_size = Vector2(120, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="TypeHeader" type="Label" parent="FragmentWindow/MetadataRow/TypeBlock" unique_id=295650244]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3372549, 0.8039216, 0.9098039, 1)
+theme_override_font_sizes/font_size = 9
+text = "TYPE"
+
+[node name="TypeValue" type="Label" parent="FragmentWindow/MetadataRow/TypeBlock" unique_id=185232832]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91764706, 0.9607843, 0.972549, 1)
+theme_override_font_sizes/font_size = 13
+text = "REGENERADOR"
+
+[node name="SeparatorA" type="ColorRect" parent="FragmentWindow/MetadataRow" unique_id=1308180402]
+custom_minimum_size = Vector2(1, 34)
+layout_mode = 2
+size_flags_vertical = 5
+mouse_filter = 2
+color = Color(1, 1, 1, 0.15686275)
+
+[node name="EffectBlock" type="VBoxContainer" parent="FragmentWindow/MetadataRow" unique_id=1965944936]
+custom_minimum_size = Vector2(165, 44)
+layout_mode = 2
+
+[node name="EffectHeader" type="Label" parent="FragmentWindow/MetadataRow/EffectBlock" unique_id=1962470940]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3372549, 0.8039216, 0.9098039, 1)
+theme_override_font_sizes/font_size = 9
+text = "PRIMARY EFFECT"
+
+[node name="EffectValue" type="Label" parent="FragmentWindow/MetadataRow/EffectBlock" unique_id=168663220]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91764706, 0.9607843, 0.972549, 1)
+theme_override_font_sizes/font_size = 13
+text = "REPARACIÓ TISSULAR"
+
+[node name="SeparatorB" type="ColorRect" parent="FragmentWindow/MetadataRow" unique_id=309378426]
+custom_minimum_size = Vector2(1, 34)
+layout_mode = 2
+size_flags_vertical = 5
+mouse_filter = 2
+color = Color(1, 1, 1, 0.15686275)
+
+[node name="ImpactBlock" type="VBoxContainer" parent="FragmentWindow/MetadataRow" unique_id=2129639974]
+custom_minimum_size = Vector2(100, 44)
+layout_mode = 2
+
+[node name="ImpactHeader" type="Label" parent="FragmentWindow/MetadataRow/ImpactBlock" unique_id=406202884]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3372549, 0.8039216, 0.9098039, 1)
+theme_override_font_sizes/font_size = 9
+text = "IMPACT"
+
+[node name="ImpactValue" type="Label" parent="FragmentWindow/MetadataRow/ImpactBlock" unique_id=973006641]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.29411766, 0.29411766, 1)
+theme_override_font_sizes/font_size = 13
+text = "ALT"
+
+[node name="ModifyButton" type="Button" parent="FragmentWindow" unique_id=1313498713]
+layout_mode = 0
+offset_left = 644.0
+offset_top = 88.0
+offset_right = 793.0
+offset_bottom = 214.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_colors/font_focus_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.94509804, 0.9529412, 1)
+theme_override_colors/font_hover_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxFlat_lquwl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7mycd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kek77")
+text = "ANALYZE FRAGMENT"
+flat = true
+autowrap_mode = 2
+script = ExtResource("8_kek77")
+
+[node name="RedGlow" type="Control" parent="FragmentWindow/ModifyButton" unique_id=884772542]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 9.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("8_5vw27")
+frame_color = Color(0.4, 0.9019608, 1, 0.42745098)
+line_width = 5.0
+corner_length = 28.0
+diagonal_size = 9.0
+
+[node name="ButtonBackground" type="Panel" parent="FragmentWindow/ModifyButton" unique_id=633804069]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4c57u")
+
+[node name="RedFrame" type="Control" parent="FragmentWindow/ModifyButton" unique_id=657948051]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -5.0
+offset_right = 10.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("8_5vw27")
+frame_color = Color(0.4, 0.9019608, 1, 1)
+line_width = 5.0
+corner_length = 28.0
+diagonal_size = 9.0
+
+[node name="ActionChevrons" type="Label" parent="FragmentWindow/ModifyButton" unique_id=2093852383]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 75.0
+offset_right = 158.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_font_sizes/font_size = 21
+text = ". . ."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FragmentID" type="Label" parent="FragmentWindow" unique_id=496982550]
+layout_mode = 0
+offset_left = 647.0
+offset_top = 20.0
+offset_right = 817.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0.31919998, 0.74451995, 0.84, 0.7294118)
+theme_override_font_sizes/font_size = 11
+text = "ID: FRAG-α-07"
+horizontal_alignment = 2
+
+[node name="HeaderLine" type="ColorRect" parent="FragmentWindow" unique_id=110913194]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 50.0
+offset_right = 645.0
+offset_bottom = 51.0
+color = Color(0.39999998, 0.9, 1, 0.2)
+
+[node name="BackButton" type="Button" parent="FragmentWindow" unique_id=1353296119]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 222.0
+offset_right = 183.0
+offset_bottom = 275.0
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_efxa6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dg77c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ycdy4")
+text = "BACK TO OTHER 
+FRAGMENTS"
+
+[node name="FragmentProgress" type="Control" parent="." unique_id=512372168]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="aplha" type="ColorRect" parent="FragmentProgress" unique_id=114516415]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 533.0
+offset_right = 406.0
+offset_bottom = 551.0
+color = Color(0.0070000016, 0.040250003, 0.14, 1)
+
+[node name="Label" type="Label" parent="FragmentProgress/aplha" unique_id=929294768]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.35806838, 0.76868063, 0.9647406, 1)
+theme_override_font_sizes/font_size = 13
+text = "ALPHA"
+
+[node name="AlphaStatus" type="Label" parent="FragmentProgress" unique_id=1731443667]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 527.0
+offset_right = 438.0
+offset_bottom = 554.0
+theme_override_colors/font_color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TickIcon" type="TextureRect" parent="FragmentProgress/AlphaStatus" unique_id=1803018952]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_dg77c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BetaStatus" type="Label" parent="FragmentProgress" unique_id=908736442]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 527.0
+offset_right = 560.0
+offset_bottom = 554.0
+theme_override_colors/font_color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TickIcon" type="TextureRect" parent="FragmentProgress/BetaStatus" unique_id=1615289211]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_dg77c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GammaStatus" type="Label" parent="FragmentProgress" unique_id=290209791]
+layout_mode = 0
+offset_left = 667.0
+offset_top = 527.0
+offset_right = 694.0
+offset_bottom = 554.0
+theme_override_colors/font_color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TickIcon" type="TextureRect" parent="FragmentProgress/GammaStatus" unique_id=13393374]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_dg77c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DeltaStatus" type="Label" parent="FragmentProgress" unique_id=1993149079]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 527.0
+offset_right = 819.0
+offset_bottom = 554.0
+theme_override_colors/font_color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TickIcon" type="TextureRect" parent="FragmentProgress/DeltaStatus" unique_id=1003008754]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_dg77c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="EpsilonStatus" type="Label" parent="FragmentProgress" unique_id=2013335438]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 527.0
+offset_right = 955.0
+offset_bottom = 554.0
+theme_override_colors/font_color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TickIcon" type="TextureRect" parent="FragmentProgress/EpsilonStatus" unique_id=1526874945]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_dg77c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Command" type="Control" parent="." unique_id=1664469306]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 266.0
+offset_top = 59.0
+offset_right = 898.0
+offset_bottom = 154.0
+
+[node name="MainCommand" type="Label" parent="Command" unique_id=1270684841]
+layout_mode = 0
+offset_left = -25.0
+offset_top = 18.0
+offset_right = 651.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.8745098)
+theme_override_fonts/font = ExtResource("9_kek77")
+theme_override_font_sizes/font_size = 22
+text = "SELECT THE GENE FRAGMENT YOU WANT TO MODIFY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SuggestionCommand" type="Label" parent="Command" unique_id=1426846750]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 57.0
+offset_right = 648.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.39999998, 0.9, 1, 0.85490197)
+theme_override_fonts/font = ExtResource("9_kek77")
+theme_override_font_sizes/font_size = 17
+text = "< HOVER OVER THE DNA >"
+horizontal_alignment = 1
+
+[node name="UB" type="Sprite2D" parent="." unique_id=965324991]
+position = Vector2(1081.5, 90.00001)
+scale = Vector2(0.22812484, 0.23125)
+texture = ExtResource("10_efxa6")
+
+[node name="iGEM" type="Sprite2D" parent="." unique_id=1379168038]
+position = Vector2(1019, 90)
+scale = Vector2(0.02334912, 0.02264456)
+texture = ExtResource("11_dg77c")
+
+[connection signal="input_event" from="DNA/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="DNA/GenePoints/Gene1" to="." method="_on_gene_1_input_event"]
+[connection signal="input_event" from="DNA/GenePoints/Gene2" to="." method="_on_gene_2_input_event"]
+[connection signal="input_event" from="DNA/GenePoints/Gene3" to="." method="_on_gene_3_input_event"]
+[connection signal="input_event" from="DNA/GenePoints/Gene4" to="." method="_on_gene_4_input_event"]
+[connection signal="input_event" from="DNA/GenePoints/Gene5" to="." method="_on_gene_5_input_event"]
+[connection signal="pressed" from="FragmentWindow/ModifyButton" to="." method="_on_modify_button_pressed"]
+[connection signal="pressed" from="FragmentWindow/BackButton" to="." method="_on_back_button_pressed"]

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dbumdkuqcsmp5"]
+
+[ext_resource type="Script" uid="uid://cdptyqk840p2j" path="res://ui/DNA/dna_fragment_visual.gd" id="1_lnxmt"]
+
+[node name="DNAFragmentVisual" type="Node2D" unique_id=1823081989]
+position = Vector2(497, 233)
+script = ExtResource("1_lnxmt")
+opening_distance = null

@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://dxense5tk418a"]
+
+[ext_resource type="Script" uid="uid://bu3xym6sbgguv" path="res://final_scene.gd" id="1_c6nnq"]
+[ext_resource type="Texture2D" uid="uid://c44afa6fadksx" path="res://finalscene base.png" id="2_n143n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vh3px"]
+bg_color = Color(0.031999998, 0.08, 0.064, 0)
+border_color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0.38220003, 0.91, 0.5669301, 0)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jremd"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.38431373, 0.9098039, 0.5647059, 0.20784314)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.38431373, 0.9098039, 0.5647059, 0.33333334)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iu4q0"]
+bg_color = Color(0.03137255, 0.101960786, 0.0627451, 0.9019608)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0.38431373, 0.9098039, 0.5647059, 0.13333334)
+shadow_size = 4
+
+[node name="FinalScene" type="Control" unique_id=1872149699]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c6nnq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1013133053]
+position = Vector2(576, 324)
+scale = Vector2(0.75000006, 0.6328125)
+texture = ExtResource("2_n143n")
+
+[node name="FinalUI" type="Control" parent="." unique_id=460454387]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ResultBanner" type="Panel" parent="FinalUI" unique_id=2085111566]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 16.0
+offset_right = 883.0
+offset_bottom = 85.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh3px")
+
+[node name="BannerGlow" type="Panel" parent="FinalUI/ResultBanner" unique_id=1192545283]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -1.0
+offset_right = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jremd")
+
+[node name="BannerCore" type="Panel" parent="FinalUI/ResultBanner" unique_id=510010135]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iu4q0")
+
+[node name="TopAccent" type="ColorRect" parent="FinalUI/ResultBanner" unique_id=1490612543]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 9.0
+offset_right = 109.0
+offset_bottom = 10.0
+mouse_filter = 2
+color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+
+[node name="BottomAccent" type="ColorRect" parent="FinalUI/ResultBanner" unique_id=524591026]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 63.0
+offset_right = 597.0
+offset_bottom = 64.0
+mouse_filter = 2
+color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+
+[node name="LeftNotch" type="ColorRect" parent="FinalUI/ResultBanner" unique_id=1755221563]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 9.0
+offset_bottom = 58.0
+mouse_filter = 2
+color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+
+[node name="RightNotch" type="ColorRect" parent="FinalUI/ResultBanner" unique_id=1284273755]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 20.0
+offset_right = 603.0
+offset_bottom = 56.0
+mouse_filter = 2
+color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+
+[node name="ResultIcon" type="Label" parent="FinalUI/ResultBanner" unique_id=1682886143]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 66.0
+theme_override_colors/font_color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+theme_override_font_sizes/font_size = 40
+text = " ✓"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResultTitle" type="Label" parent="FinalUI/ResultBanner" unique_id=1599485245]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 9.0
+offset_right = 490.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0.38431373, 0.9098039, 0.5647059, 1)
+theme_override_font_sizes/font_size = 24
+text = "RESULTAT BENEFICIÓS"
+
+[node name="ResultSubtitle" type="Label" parent="FinalUI/ResultBanner" unique_id=1838915854]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 41.0
+offset_right = 577.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.8509804, 1, 0.9019608, 1)
+theme_override_font_sizes/font_size = 14
+text = "LA MUTACIÓ HA TINGUT UN IMPACTE POSITIU EN EL SUBJECTE"

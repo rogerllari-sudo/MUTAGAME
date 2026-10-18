@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c5s1fxc5vfojt"]
+
+[ext_resource type="Script" uid="uid://c040c7vxw7a3s" path="res://ui/panels/scifi_panel_v2.gd" id="1_i3e2f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1iqwg"]
+bg_color = Color(0.0627451, 0.09803922, 0.13725491, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.39999998, 0.9, 1, 0.23921569)
+shadow_size = 8
+
+[node name="SciFiPanelV2" type="Control" unique_id=1473503072]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 97.0
+offset_top = 46.0
+offset_right = 614.0
+offset_bottom = 329.0
+
+[node name="Base" type="Panel" parent="." unique_id=1549698904]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1iqwg")
+
+[node name="Frame" type="Control" parent="." unique_id=1031097089]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i3e2f")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1361509870]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 22

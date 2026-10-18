@@ -1,0 +1,676 @@
+[gd_scene format=3 uid="uid://b5sw157v1t7gh"]
+
+[ext_resource type="Script" uid="uid://c5ks8vh716e87" path="res://result_scene.gd" id="1_qxdv1"]
+[ext_resource type="PackedScene" uid="uid://b6jinjj4j8p8r" path="res://ui/panels/SciFiPanel.tscn" id="2_1scma"]
+[ext_resource type="Texture2D" uid="uid://lkqa54fq34ss" path="res://theme/resultscene background.png" id="2_smw3s"]
+[ext_resource type="PackedScene" uid="uid://dbumdkuqcsmp5" path="res://ui/DNA/DNAFragmentVisual.tscn" id="3_cvpwv"]
+[ext_resource type="PackedScene" uid="uid://c8bx1hrux4xkw" path="res://ui/RNA/RNAVisual.tscn" id="4_ecs8g"]
+[ext_resource type="Script" uid="uid://eqdna5acqj7j" path="res://story_controller.gd" id="4_rlj5m"]
+[ext_resource type="PackedScene" uid="uid://bej7n8pwi8mpe" path="res://ui/RNA/RibosomeVisual.tscn" id="5_7k3sh"]
+[ext_resource type="PackedScene" uid="uid://ero6ve3r6gdr" path="res://ui/protein/protein_chain_visual.tscn" id="6_w2khg"]
+[ext_resource type="PackedScene" uid="uid://baxewsyula7jo" path="res://ui/human/human_visual.tscn" id="7_tou2d"]
+[ext_resource type="Script" uid="uid://c1iwin5lyt0gt" path="res://process_progress_overlay.gd" id="10_usntd"]
+[ext_resource type="Script" uid="uid://bvw5wrnjorudt" path="res://bottom_progress_overlay.gd" id="11_esif2"]
+[ext_resource type="Script" uid="uid://bnr7kng3dllmt" path="res://subject_scanner.gd" id="11_p88p8"]
+[ext_resource type="Texture2D" uid="uid://bi5r28k17orpo" path="res://ui/icons/tick.png" id="12_smw3s"]
+[ext_resource type="Texture2D" uid="uid://ctbdei83u0pva" path="res://ui/buttons/PNG igem.png" id="13_2oll2"]
+[ext_resource type="Texture2D" uid="uid://e0lu52x81v8r" path="res://ui/human/ub lgoo png.png" id="14_smw3s"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h0k2m"]
+load_path = "res://.godot/imported/(old)alpha_neutral.png-921c6e3ec75e3f4f7d387d84825191be.ctex"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_esif2"]
+bg_color = Color(0.26999998, 0.90266675, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.39999998, 0.9, 1, 0)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.39999998, 0.9, 1, 0)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1bto"]
+bg_color = Color(0.27058825, 0.90588236, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4, 0.9019608, 1, 0.1882353)
+corner_radius_top_left = 23
+corner_radius_top_right = 23
+corner_radius_bottom_right = 23
+corner_radius_bottom_left = 23
+shadow_color = Color(0.4, 0.9019608, 1, 0.2509804)
+shadow_size = 10
+
+[node name="ResultScene" type="Control" unique_id=1556205708]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qxdv1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1636273245]
+position = Vector2(576, 324)
+scale = Vector2(0.6889952, 0.6886291)
+texture = ExtResource("2_smw3s")
+
+[node name="Background" type="ColorRect" parent="." unique_id=184077133]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMargin" type="MarginContainer" parent="." unique_id=1518803342]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 45
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 45
+theme_override_constants/margin_bottom = 30
+
+[node name="MainLayout" type="VBoxContainer" parent="MainMargin" unique_id=1697613889]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="TopBar" type="Control" parent="MainMargin/MainLayout" unique_id=45798666]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="AnalysisTitle" type="Label" parent="MainMargin/MainLayout/TopBar" unique_id=1854230972]
+visible = false
+layout_mode = 0
+offset_left = -3.0
+offset_top = 1.0
+offset_right = 333.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0.9098039, 0.96862745, 0.98039216, 1)
+theme_override_font_sizes/font_size = 30
+text = "RESULTAT DE L’ANÀLISI"
+
+[node name="StoryPanel" parent="MainMargin/MainLayout" unique_id=849535497 instance=ExtResource("2_1scma")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StoryArea" type="Control" parent="MainMargin/MainLayout/StoryPanel" unique_id=968513677]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StoryMargin" type="MarginContainer" parent="MainMargin/MainLayout/StoryPanel/StoryArea" unique_id=684714988]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 25
+
+[node name="StageContainer" type="Control" parent="MainMargin/MainLayout/StoryPanel/StoryArea/StoryMargin" unique_id=1029602515]
+layout_mode = 2
+
+[node name="ProgressArea" type="Control" parent="MainMargin/MainLayout" unique_id=1249615786]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="ProgressPlaceholder" type="Label" parent="MainMargin/MainLayout/ProgressArea" unique_id=1089622628]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 5.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.44705883, 0.50980395, 0.54901963, 1)
+theme_override_font_sizes/font_size = 18
+text = "ADN — ARN — PROTEÏNA — FENOTIP — RESULTAT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResultOverlay" type="Control" parent="." unique_id=1722798332]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackButton" type="Button" parent="." unique_id=869745075]
+visible = false
+layout_mode = 0
+offset_left = 803.0
+offset_top = 107.0
+offset_right = 877.0
+offset_bottom = 138.0
+text = "TORNAR"
+
+[node name="StoryController" type="Node2D" parent="." unique_id=1865283517]
+script = ExtResource("4_rlj5m")
+
+[node name="MolecularStage" type="Control" parent="." unique_id=685252358]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 254.0
+offset_top = 153.0
+offset_right = -259.0
+offset_bottom = -115.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StageHeader" type="VBoxContainer" parent="MolecularStage" unique_id=1317458697]
+visible = false
+layout_mode = 0
+offset_left = 21.0
+offset_top = 4.0
+offset_right = 320.0
+offset_bottom = 70.0
+
+[node name="StageLabel" type="Label" parent="MolecularStage/StageHeader" unique_id=308161662]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "ETAPA 01 / ADN"
+
+[node name="StageDescription" type="Label" parent="MolecularStage/StageHeader" unique_id=1587588632]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.96862745, 0.98039216, 1)
+theme_override_font_sizes/font_size = 20
+text = "FRAGMENT MUTAT DETECTAT"
+
+[node name="DNAActor" type="Control" parent="MolecularStage" unique_id=920027914]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DNACenter" type="Control" parent="MolecularStage/DNAActor" unique_id=943065537]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.508
+anchor_right = 0.5
+anchor_bottom = 0.508
+offset_left = -205.0
+offset_top = -111.73201
+offset_right = 221.5
+offset_bottom = 111.76799
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DNAFragmentVisual" parent="MolecularStage/DNAActor/DNACenter" unique_id=1823081989 instance=ExtResource("3_cvpwv")]
+position = Vector2(210, 116)
+pair_count = 7
+opening_distance = 72.0
+
+[node name="RNAActor" type="Control" parent="MolecularStage" unique_id=1298860065]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RNAVisual" parent="MolecularStage/RNAActor" unique_id=1750087631 instance=ExtResource("4_ecs8g")]
+position = Vector2(499, 182)
+
+[node name="RibosomeActor" type="Control" parent="MolecularStage" unique_id=532415372]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RibosomeVisual" parent="MolecularStage/RibosomeActor" unique_id=706828108 instance=ExtResource("5_7k3sh")]
+position = Vector2(681, 182)
+
+[node name="ProteinActor" type="Control" parent="MolecularStage" unique_id=1831690202]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProteinChainVisual" parent="MolecularStage/ProteinActor" unique_id=273972801 instance=ExtResource("6_w2khg")]
+position = Vector2(701, 142)
+
+[node name="HumanActor" type="Control" parent="MolecularStage" unique_id=749198278]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HumanVisual" parent="MolecularStage/HumanActor" unique_id=1041905029 instance=ExtResource("7_tou2d")]
+visible = false
+position = Vector2(502, 180)
+
+[node name="HumanTexture" type="Sprite2D" parent="MolecularStage/HumanActor" unique_id=1506215053]
+z_index = 20
+position = Vector2(326.49997, 183.50002)
+scale = Vector2(0.2607422, 0.25325522)
+texture = SubResource("CompressedTexture2D_h0k2m")
+
+[node name="PhenotypeEffects" type="Control" parent="MolecularStage" unique_id=1938756080]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubjectScanner" type="Control" parent="MolecularStage/PhenotypeEffects" unique_id=759092547]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = -13.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("11_p88p8")
+
+[node name="ScannerStatus" type="Label" parent="MolecularStage/PhenotypeEffects/SubjectScanner" unique_id=446086483]
+layout_mode = 0
+offset_left = 157.0
+offset_right = 472.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.627451, 0.96862745, 1, 1)
+text = "CALIBRANT MODEL BIOLÒGIC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StoryTextLayer" type="Control" parent="MolecularStage" unique_id=705321066]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = -15.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProcessStatus" type="Label" parent="MolecularStage/StoryTextLayer" unique_id=1334730079]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 390.0
+offset_top = 330.0
+offset_right = 618.0
+offset_bottom = 353.0
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+text = "FRAGMENT MUTAT DETECTAT"
+horizontal_alignment = 1
+
+[node name="MolecularCenter" type="Marker2D" parent="MolecularStage" unique_id=1910282739]
+position = Vector2(328, 185)
+
+[node name="MutationIndicator" type="VBoxContainer" parent="." unique_id=2044663184]
+layout_mode = 0
+offset_left = 939.0
+offset_top = 193.0
+offset_right = 1112.0
+offset_bottom = 476.0
+
+[node name="MutationDetails" type="Label" parent="MutationIndicator" unique_id=1489029818]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.96862745, 0.98039216, 1)
+theme_override_font_sizes/font_size = 13
+text = "UV · PARELL 3"
+
+[node name="GeneIdentifier" type="Label" parent="." unique_id=1159901569]
+visible = false
+layout_mode = 0
+offset_left = 473.0
+offset_top = 30.0
+offset_right = 764.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0.4, 0.9019608, 1, 1)
+text = "FRAGMENT α — ESCUT ANTIRADIACIÓ"
+
+[node name="ProcessProgressOverlay" type="Control" parent="." unique_id=575177891]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_usntd")
+
+[node name="Stage01" type="Panel" parent="ProcessProgressOverlay" unique_id=343130636]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 149.0
+offset_right = 231.0
+offset_bottom = 199.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_esif2")
+
+[node name="ActiveArrow" type="Label" parent="ProcessProgressOverlay/Stage01" unique_id=1708855036]
+visible = false
+layout_mode = 0
+offset_left = -14.0
+offset_top = 12.0
+offset_right = 26.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.5411765, 0.9490196, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = ">"
+
+[node name="CompletedCheck" type="TextureRect" parent="ProcessProgressOverlay/Stage01" unique_id=191966650]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 6.0
+offset_right = 175.0
+offset_bottom = 43.0
+mouse_filter = 2
+texture = ExtResource("12_smw3s")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Stage02" type="Panel" parent="ProcessProgressOverlay" unique_id=327388065]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 217.0
+offset_right = 231.0
+offset_bottom = 266.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_esif2")
+
+[node name="ActiveArrow" type="Label" parent="ProcessProgressOverlay/Stage02" unique_id=594816491]
+visible = false
+layout_mode = 0
+offset_left = -12.0
+offset_top = 12.0
+offset_right = 28.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.5411765, 0.9490196, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = ">"
+
+[node name="CompletedCheck" type="TextureRect" parent="ProcessProgressOverlay/Stage02" unique_id=891764507]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 8.0
+offset_right = 189.0
+offset_bottom = 43.0
+mouse_filter = 2
+texture = ExtResource("12_smw3s")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Stage03" type="Panel" parent="ProcessProgressOverlay" unique_id=1086248080]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 286.0
+offset_right = 231.0
+offset_bottom = 334.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_esif2")
+
+[node name="ActiveArrow" type="Label" parent="ProcessProgressOverlay/Stage03" unique_id=840061278]
+visible = false
+layout_mode = 0
+offset_left = -14.0
+offset_top = 9.0
+offset_right = 26.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.5411765, 0.9490196, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = ">"
+
+[node name="CompletedCheck" type="TextureRect" parent="ProcessProgressOverlay/Stage03" unique_id=1301768484]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 8.0
+offset_right = 181.0
+offset_bottom = 41.0
+mouse_filter = 2
+texture = ExtResource("12_smw3s")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Stage04" type="Panel" parent="ProcessProgressOverlay" unique_id=158894950]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 356.0
+offset_right = 231.0
+offset_bottom = 405.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_esif2")
+
+[node name="ActiveArrow" type="Label" parent="ProcessProgressOverlay/Stage04" unique_id=377807630]
+visible = false
+layout_mode = 0
+offset_left = -12.0
+offset_top = 10.0
+offset_right = 28.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.5411765, 0.9490196, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = ">"
+
+[node name="CompletedCheck" type="TextureRect" parent="ProcessProgressOverlay/Stage04" unique_id=1605595840]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 5.0
+offset_right = 175.0
+offset_bottom = 38.0
+mouse_filter = 2
+texture = ExtResource("12_smw3s")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Stage05" type="Panel" parent="ProcessProgressOverlay" unique_id=1229751768]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 422.0
+offset_right = 231.0
+offset_bottom = 473.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_esif2")
+
+[node name="ActiveArrow" type="Label" parent="ProcessProgressOverlay/Stage05" unique_id=2079091755]
+visible = false
+layout_mode = 0
+offset_left = -12.0
+offset_top = 10.0
+offset_right = 28.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.5411765, 0.9490196, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = ">"
+
+[node name="CompletedCheck" type="TextureRect" parent="ProcessProgressOverlay/Stage05" unique_id=1319692591]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 7.0
+offset_right = 175.0
+offset_bottom = 44.0
+mouse_filter = 2
+texture = ExtResource("12_smw3s")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BottomProgressOverlay" type="Control" parent="." unique_id=815237372]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("11_esif2")
+
+[node name="StepDNAGlowLarge" type="Panel" parent="BottomProgressOverlay" unique_id=1186351921]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 564.0
+offset_right = 174.0
+offset_bottom = 602.0
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h1bto")
+
+[node name="StepDNA" type="Panel" parent="BottomProgressOverlay" unique_id=1598925058]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 568.0
+offset_right = 170.0
+offset_bottom = 598.0
+pivot_offset = Vector2(16, 16)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h1bto")
+
+[node name="StepRNAGlowLarge" type="Panel" parent="BottomProgressOverlay" unique_id=424792067]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 564.0
+offset_right = 377.0
+offset_bottom = 603.0
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h1bto")
+
+[node name="StepRNA" type="Panel" parent="BottomProgressOverlay" unique_id=1198555386]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 568.0
+offset_right = 373.0
+offset_bottom = 599.0
+pivot_offset = Vector2(16, 16)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h1bto")
+
+[node name="StepProteinGlowLarge" type="Panel" parent="BottomProgressOverlay" unique_id=1169023955]
+layout_mode = 0
+offset_left = 555.0
+offset_top = 564.0
+offset_right = 592.0
+offset_bottom = 603.0
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h1bto")
+
+[node name="StepProtein" type="Panel" parent="BottomProgressOverlay" unique_id=862148963]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 568.0
+offset_right = 588.0
+offset_bottom = 599.0
+pivot_offset = Vector2(16, 16)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h1bto")
+
+[node name="StepPhenotypeGlowLarge" type="Panel" parent="BottomProgressOverlay" unique_id=1803789245]
+layout_mode = 0
+offset_left = 770.0
+offset_top = 564.0
+offset_right = 809.0
+offset_bottom = 603.0
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h1bto")
+
+[node name="StepPhenotype" type="Panel" parent="BottomProgressOverlay" unique_id=21879577]
+layout_mode = 0
+offset_left = 774.0
+offset_top = 568.0
+offset_right = 805.0
+offset_bottom = 599.0
+pivot_offset = Vector2(16, 16)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h1bto")
+
+[node name="StepResultGlowLarge" type="Panel" parent="BottomProgressOverlay" unique_id=761737386]
+layout_mode = 0
+offset_left = 974.0
+offset_top = 564.0
+offset_right = 1013.0
+offset_bottom = 603.0
+pivot_offset = Vector2(20, 20)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h1bto")
+
+[node name="StepResult" type="Panel" parent="BottomProgressOverlay" unique_id=1927470643]
+layout_mode = 0
+offset_left = 978.0
+offset_top = 568.0
+offset_right = 1009.0
+offset_bottom = 599.0
+pivot_offset = Vector2(16, 16)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h1bto")
+
+[node name="ResultTransition" type="ColorRect" parent="." unique_id=164783559]
+modulate = Color(1, 1, 1, 0)
+z_index = 1000
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.7254902, 0.98039216, 1, 1)
+
+[node name="iGEM" type="Sprite2D" parent="." unique_id=241911984]
+position = Vector2(1062, 54.999992)
+scale = Vector2(0.013863561, 0.014557221)
+texture = ExtResource("13_2oll2")
+
+[node name="UB" type="Sprite2D" parent="." unique_id=122463004]
+position = Vector2(1095.5, 55.75)
+scale = Vector2(0.12812476, 0.13593748)
+texture = ExtResource("14_smw3s")
+
+[node name="(tapa)" type="ColorRect" parent="." unique_id=1071808270]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 169.0
+offset_right = 34.0
+offset_bottom = 183.0
+color = Color(0.0377, 0.040776663, 0.13, 1)

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bej7n8pwi8mpe"]
+
+[ext_resource type="Script" uid="uid://68am4xtxfky8" path="res://ui/RNA/ribosome_visual.gd" id="1_k5qkf"]
+
+[node name="RibosomeVisual" type="Node2D" unique_id=706828108]
+script = ExtResource("1_k5qkf")
